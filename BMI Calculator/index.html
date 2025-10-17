@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <nav class="hed">
+                <div class="yes">
+                    BMI Calculator
+                </div>
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                </ul>
+                <div class="search">
+                    <input type="text" placeholder=" Search" class="srch">
+                </div>
+                <button class="btn">Search</button>
+            </nav>
+        </header>
+        <main>
+            <div class="container">
+                <div class="form-container">
+                    <h2 class="hd">BMI Calculator</h2>
+                    <div class="col1">
+                        <label for="age">Age : </label>
+                        <input type="text" class="srch" id="age">
+                    </div>
+                    <div class="col2">
+                        <label for="gender">Gender : </label>
+                        <label for="male" class="gen">
+                            <input type="radio" id="m" value="male" name="gender">Male
+                        </label>
+                        <label for="female">
+                            <input type="radio" id="f" value="female" name="gender">Female
+                        </label>
+                    </div>
+                    <div class="col3">
+                        <label for="height">Height(cm) : </label>
+                        <input type="text" id="height" class="srch">
+                    </div>
+                    <div class="col4">
+                        <label for="weight">Weight(kg) : </label>
+                        <input type="text" id="weight" class="srch">
+                    </div>
+                    <button class="btn" id="btn">Calculate</button>
+                    <div id="col5"></div>
+                    <div id="col6"></div>
+                    <div id="info">
+                        <p>Underweight: BMI < 18.5</p>
+                        <p>Healthy: BMI 18.5 - 24.9</p>
+                        <p>Overweight: BMI 25 - 29.9</p>
+                        <p>Obese: BMI ≥ 30</p>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="bmiChart" width="400" height="400"></canvas>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
